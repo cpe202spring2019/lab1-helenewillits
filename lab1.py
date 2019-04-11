@@ -20,6 +20,10 @@ def max_list_iter(int_list):  # must use iteration not recursion
 # raises ValueError if list is None
 def reverse_rec(int_list, n=0):  # must use recursion
     # n counts up and len(int_list)-(n+1) counts down until they meet
+
+    if int_list == []:
+        return None
+
     if int_list is None:
         raise ValueError
     if n >= len(int_list) - (n + 1):
