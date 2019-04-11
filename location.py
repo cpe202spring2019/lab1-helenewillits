@@ -1,6 +1,7 @@
-# CPE 202 Lab 1
+# CPE 202 Lab 0
 
 # represents a location using name, latitude and longitude
+
 
 
 class Location:
@@ -15,7 +16,7 @@ class Location:
                 self.lon == other.lon)
 
     def __repr__(self):
-        return "{0}, Latitude:{1}, Longitude:{2}".format(self.name, self.lat, self.lon)
+        return '{0}, Latitude:{1}, Longitude:{2}'.format(self.name, self.lat, self.lon)
 
 def main():
     loc1 = Location("SLO", 35.3, -120.7)
