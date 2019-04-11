@@ -70,7 +70,12 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(bin_search(2, low, high, list_val), 2)  # test value below center
         self.assertEqual(bin_search(7, low, high, list_val), 5)  # test value above center
         self.assertEqual(bin_search(4, low, high, list_val), 4)  # test center value
-        self.assertEqual(bin_search(11, low, high, list_val), None)
+        self.assertEqual(bin_search(-1, low, high, list_val), None)
+
+        with self.assertRaises(IndexError):
+            bin_search(0, -1, high, list_val)
+        # self.assertRaises(bin_search(-1, -1, high, list_val), IndexError)
+        # self.assertRaises(bin_search(-1, low, 20, list_val), IndexError)
 
 
 if __name__ == "__main__":
