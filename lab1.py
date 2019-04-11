@@ -37,6 +37,8 @@ def reverse_rec(int_list, n=0):  # must use recursion
 def bin_search(target, low, high, int_list):  # must use recursion
     if int_list is None:
         raise ValueError
+    if low < 0 or high >= len(int_list):
+        raise IndexError
 
     center_index = int(((high - low) / 2) + low)  # center or center.floor
 
