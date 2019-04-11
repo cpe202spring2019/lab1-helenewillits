@@ -36,7 +36,7 @@ class TestLab1(unittest.TestCase):
     def test_reverse_rec(self):
         with self.assertRaises(ValueError):
             reverse_rec(None)
-        self.assertEqual(reverse_rec([]), [])
+        self.assertEqual(reverse_rec([]), None)
         self.assertEqual(reverse_rec([1]), [1])  # test one term
 
         self.assertEqual(reverse_rec([1, 1, 1]), [1, 1, 1])
