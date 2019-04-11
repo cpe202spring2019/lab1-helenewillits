@@ -74,8 +74,8 @@ class TestLab1(unittest.TestCase):
 
         with self.assertRaises(IndexError):
             bin_search(0, -1, high, list_val)
-        # self.assertRaises(bin_search(-1, -1, high, list_val), IndexError)
-        # self.assertRaises(bin_search(-1, low, 20, list_val), IndexError)
+        with self.assertRaises(IndexError):
+            bin_search(0, low, 20, list_val)
 
 
 if __name__ == "__main__":
